@@ -51,6 +51,14 @@ Drafted 2 Oct 2026 from the project docs. Items marked ⚠ are assumptions; plea
 
 > **2 Oct 2026, world-class pass:** the Lexend kit was refined in `world-class/`. Changes: one cut angle for every stroke end and the dash, aligned f/t crossbars, measured spacing, a lighter dark cut, small-size cuts, and Teal deep `#147B80` for small sizes (5.0:1 on white). An optional f–t–f join study was added. `final-lexend/` is untouched. See `world-class/README.md` and `world-class/index.html`. Still open: which kit is primary, a true drawn italic by a type designer, and a trademark search.
 
+> **2 Oct 2026, decisions (made user-first; validate with the owner):**
+> - **Primary kit:** Lexend world-class (`world-class/`). The family kit (`final/`) is kept as an archive.
+> - **Teal:** #1FA3A9 at 24px and up; Teal deep #147B80 below that and for text-sized use; #32BFC4 on dark.
+> - **f–t–f join:** retired.
+> - **Scheme:** B (navy + teal) is the default; A is for badges and one-colour-leaning uses.
+> - **Lockups:** rebuilt from the refined letters. The endorsed lockup needs a minimum width of 220px.
+> - **Figma:** prompts are in `world-class/FIGMA_PROMPTS.md`.
+
 
 | Date | Decision |
 |---|---|

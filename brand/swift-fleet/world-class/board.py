@@ -1,4 +1,5 @@
 import sys,re; sys.path.insert(0,'.')
+from inuse import fragment as inuse_fragment, CSS as INUSE_CSS
 from kit import *
 def inner(f):
     s=open(f).read(); return re.search(r'<svg[^>]*>(.*)</svg>',s,re.S).group(1), re.search(r'viewBox="([^"]+)"',s).group(1)
@@ -38,9 +39,20 @@ ul{{margin:8px 0 0;padding-left:20px}}li{{margin:4px 0}}
 .sw{{display:grid;grid-template-columns:44px 120px 90px 1fr;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}} .sw i{{width:44px;height:28px;border-radius:6px;display:block;border:1px solid var(--line)}}
 @media(max-width:640px){{.sw{{grid-template-columns:44px 1fr}} .sw span,.sw code{{grid-column:2}}}}
 .dont{{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}} .dont .tile{{min-height:100px;padding:14px}} .x{{font-size:13px;color:#B42318;margin-top:6px}}
-</style></head><body><main>
+{INUSE_CSS}</style></head><body><main>
 <h1>Swiftfleet logo · world-class pass</h1><p class="sub">Lexend kit, rebuilt 2 Oct 2026. Same idea and colours, refined craft. Nothing in <code>final/</code> or <code>final-lexend/</code> was replaced.</p>
 
+<section><h2>Decisions, 2 Oct 2026 <span style="font-weight:500;color:var(--mute);font-size:14px">(made user-first; validate with the owner)</span></h2><ul>
+<li><b>Primary kit: Lexend (this build).</b> It's more ownable, matches the app's interface font, and is now as finished as the family kit. The family kit (<code>final/</code>) stays as an archive and for side-by-side use with Swiftcent.</li>
+<li><b>Two teals, one rule:</b> Teal <code>#1FA3A9</code> at 24 px and up; Teal deep <code>#147B80</code> below that and for any text-sized use; <code>#32BFC4</code> on dark.</li>
+<li><b>No f–t–f join.</b> One version only.</li>
+<li><b>Scheme B (navy + teal) is the default;</b> scheme A (all navy, teal dash) is for one-colour-leaning uses like badges.</li>
+</ul></section>
+<section><h2>Lockups</h2><div class="two">
+<div><div class="tile">{svg('out/B-lockup-endorsed-light.svg')}</div><p class="lab">“Swiftfleet by Swiftcent”: the endorsement right-aligns to the end of the t. Minimum 220 px wide.</p></div>
+<div><div class="tile dark">{svg('out/A-lockup-endorsed-dark.svg')}</div><p class="lab">On dark: scheme A shown; scheme B files also exist.</p></div>
+</div></section>
+<section><h2>In use</h2>{inuse_fragment()}</section>
 <section><h2>Before / after</h2><div class="two">
 <div><div class="tile">{svg('../final-lexend/B-wordmark-light.svg')}</div><p class="lab">Before: Lexend ExtraBold slanted, stock letter endings, rounded dash.</p></div>
 <div><div class="tile">{svg('out/B-wordmark-light.svg')}</div><p class="lab">After: one cut angle for every stroke end, aligned crossbars, measured spacing.</p></div>
@@ -56,9 +68,9 @@ ul{{margin:8px 0 0;padding-left:20px}}li{{margin:4px 0}}
 
 <section><h2>Construction</h2><p class="lab" style="margin:0 0 10px">Solid lines: the 12° cut lines through the terminals, the i stem and both ends of the dash. Dashed: the shared heights.</p>{construction}</section>
 
-<section><h2>Join study (optional)</h2><div class="two">
-<div><div class="tile">{svg('out/B-wordmark-light.svg')}</div><p class="lab">No join (recommended as primary): every letter reads at every size.</p></div>
-<div><div class="tile">{svg('out/B-wordmark-join-light.svg')}</div><p class="lab">f–t–f join: one continuous crossbar, like a convoy. More ownable, slightly harder to read small. Use only for large display if chosen.</p></div>
+<section><h2>Join study (retired)</h2><div class="two">
+<div><div class="tile">{svg('out/B-wordmark-light.svg')}</div><p class="lab">No join: the only version. Every letter reads at every size.</p></div>
+<div><div class="tile">{svg('out/B-wordmark-join-light.svg')}</div><p class="lab">f–t–f join: one continuous crossbar, like a convoy. Retired: a second version breaks “one geometry for everything” and reads worse small.</p></div>
 </div></section>
 
 <section><h2>Small sizes</h2><div class="two">

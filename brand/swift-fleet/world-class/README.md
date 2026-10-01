@@ -1,5 +1,7 @@
 # Swiftfleet logo: Lexend world-class pass (2 Oct 2026)
 
+**Primary kit since 2 Oct 2026** (decided user-first; validate with the owner). The join variant is retired.
+
 A refined build of the Lexend kit. **`../final/` and `../final-lexend/` are untouched.**
 Open `index.html` (or `board.png`) for the before/after, construction, small sizes and usage guide.
 
@@ -28,6 +30,9 @@ Open `index.html` (or `board.png`) for the before/after, construction, small siz
 | `out/wordmark-mono-navy/white.svg` | One colour, "Powered by" |
 | `out/symbol*.svg`, `out/app-icon*.svg` | Symbol and icons, regular and small cuts |
 | `kit/` | favicon.ico/svg, PNG icons, maskable, manifest, head snippet, mono/black/white symbols |
+| `out/A-/B-lockup-endorsed-light/dark.svg` | “Swiftfleet by Swiftcent”: right-aligned to the t; minimum 220 px wide |
+| `in-use.html` / `in-use.png` | The logo on real surfaces |
+| `FIGMA_PROMPTS.md` | 5 prompts for the Figma agent (components, sidebar, splash, icons, CVFMS text) |
 | `motion/index.html` | Logo, splash, dispatch animation |
 | `build.py`, `wordmark.py`, `kit.py`, `board.py` | Rebuild everything: `python3 kit.py && python3 board.py` (needs fontTools and skia-pathops; Lexend in `../refine/lettering/`) |
 

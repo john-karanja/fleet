@@ -2368,7 +2368,7 @@ mobile stream is in §13–§24.
   - The app icon is the parent's capital S with the trailing dash.
   - Flat navy #1E3F78 and teal (#1FA3A9 on light, #32BFC4 on dark); no gradients. Tested at 24 and
     16px and in one colour.
-- **Lexend** stays the app's interface typeface. Since the evening of 2 Oct there is also a Lexend-based logo kit (slanted 12°, same dash idea) in `final-lexend/`, plus a refined build in `world-class/`. **Which kit is primary, family or Lexend, is still open.** The owner and the designer both prefer the Lexend slant visually.
+- **Lexend** stays the app's interface typeface. Since the evening of 2 Oct there is also a Lexend-based logo kit (slanted 12°, same dash idea) in `final-lexend/`, plus a refined build in `world-class/`. **Primary: the Lexend world-class kit** (decided user-first on 2 Oct; validate with the owner). The family kit is archived. The Figma prompts to apply it are in `brand/swift-fleet/world-class/FIGMA_PROMPTS.md`. The full logo method, including the world-class pass (step 9), is in `brand/LOGO_PROCESS.md`.
 
 ### 29.3 What was done, in order
 
@@ -2440,7 +2440,8 @@ mobile stream is in §13–§24.
 **Brand:**
 - [ ] Official **light-background Swiftcent logo**. Ours is a recolour (white "Swift" → navy).
 - [ ] Teal on white: keep #1FA3A9 or use the parent's #32BFC4 everywhere? (The world-class pass adds Teal deep #147B80 for small sizes, at 5.0:1 on white.)
-- [ ] Decide the primary kit: family (`final/`) or Lexend (`world-class/`). Suggested method: a recall test.
+- [x] Primary kit: Lexend world-class (2 Oct, validate with the owner; a recall test is still worth running).
+- [ ] Run the 5 Figma prompts in `brand/swift-fleet/world-class/FIGMA_PROMPTS.md` (needs Figma re-auth and a manual SVG import first).
 - [ ] If Lexend wins, have a type designer draw a true italic so the s and e curves aren't mechanically sheared.
 - [ ] Logo kit:
   - "Swiftfleet by Swiftcent" lockup master
