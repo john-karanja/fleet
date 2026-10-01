@@ -1,0 +1,10 @@
+# Confidential: live-app login credentials and live server details. Never commit.
+Test Login Accounts.docx
+deesktop app screenshots/
+
+# OS / editor noise
+.DS_Store
+**/.DS_Store
+
+# Logo-tool scratch renders (regenerable)
+brand/logo/renders/
