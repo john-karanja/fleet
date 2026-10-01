@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiftfleet motion</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3F78;--teal:#1FA3A9;--teal2:#32BFC4;--ink:#0F172A;--muted:#64748B;--line:#DFE5EB;--bg:#F4F6F8}
+body{margin:0;background:var(--bg);font-family:'Source Sans 3',sans-serif;color:var(--ink)}
+h1{font-family:Outfit;margin:40px 48px 4px;font-size:30px} p.sub{margin:0 48px 24px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px;margin:0 48px 40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;min-height:300px;display:flex;flex-direction:column}
+.card h2{font-family:Outfit;font-size:16px;margin:0 0 4px} .card .note{color:var(--muted);font-size:13px;margin:0 0 16px}
+.stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative}
+button{font:600 14px 'Source Sans 3';border-radius:20px;height:40px;padding:0 20px;cursor:pointer}
+.replay{background:#fff;border:1px solid var(--line);color:var(--ink);margin-top:12px;align-self:flex-start}
+/* 1 logo */
+.wm{width:100%;max-width:420px}
+.wm .letters{opacity:0;animation:fade .35s ease-out forwards}
+.wm .dash{transform-box:fill-box;opacity:0;animation:arrive .7s cubic-bezier(.16,.84,.24,1.06) .3s forwards}
+@keyframes fade{to{opacity:1}}
+@keyframes arrive{0%{opacity:0;transform:translateX(-220%)}35%{opacity:1}100%{opacity:1;transform:translateX(0)}}
+/* 2 splash */
+.phone{width:170px;height:300px;border-radius:30px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.phone svg{width:110px;height:110px} .phone .dash{transform-box:fill-box;opacity:0;animation:arrive .7s cubic-bezier(.16,.84,.24,1.06) .25s forwards}
+/* 3 dispatch */
+.req{width:100%;max-width:380px;border:1px solid var(--line);border-radius:12px;padding:16px;position:relative;overflow:hidden}
+.req b{display:block;font-size:15px} .req span{color:var(--muted);font-size:13px}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.go{background:var(--navy);color:#fff;border:0}
+.trail{position:absolute;left:0;top:0;height:6px;width:34%;border-radius:3px;background:var(--teal);transform:translateX(-110%);opacity:0}
+.req.sent .trail{animation:sweep .75s cubic-bezier(.3,.7,.2,1) forwards}
+@keyframes sweep{0%{opacity:1;transform:translateX(-110%)}80%{opacity:1}100%{opacity:0;transform:translateX(300%)}}
+.status{font-size:13px;color:var(--muted)} .req.sent .status{color:var(--teal);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-delay:0s!important}}
+</style></head><body>
+<h1>Swiftfleet · motion</h1><p class="sub">One movement everywhere: the dash arrives from behind and settles, like a vehicle arriving. Every time a trip is dispatched, the product replays it.</p>
+<div class="grid">
+<div class="card"><h2>1 · Logo</h2><p class="note">Word appears, then the dash slides in and lands as the i-dot. 0.35s + 0.7s.</p>
+<div class="stage" id="s1"><svg class="wm" viewBox="60 4 235.7 52"><g class="letters"><path fill="#1E3F78" d="M88.9424 27.056C92.0717 28.0788 96.9586 30.0467 96.9586 36.1564C96.9586 42.581 91.53 45.8867 82.3447 45.8867C78.3346 45.8867 74.7688 45.2606 70.1742 43.8761L69.0479 36.8292C73.9348 37.9881 78.0891 38.4781 81.1171 38.4781C85.1739 38.4781 86.6899 37.5875 86.6899 36.518C86.6899 34.7796 82.485 34.2857 76.1328 31.9251C73.9348 31.1239 69.0947 29.2067 69.0947 23.3575C69.0947 17.1973 74.4726 14.1211 83.2683 14.1211C86.7873 14.1211 91.1871 14.615 94.7022 15.6806V23.0425C91.2806 21.9692 87.5161 21.5219 84.5348 21.5219C80.6261 21.5219 79.4024 22.2803 79.4024 23.1281C79.4024 24.7343 83.7009 25.2748 88.9346 27.056H88.9424Z"/><path fill="#1E3F78" d="M104.258 23.303L107.142 37.2646L110.271 23.303H118.092L121.265 37.2646L124.098 23.303H133.486L126.787 45.6066H116.966L114.184 33.5622L111.397 45.6066H101.577L94.8776 23.303H104.266H104.258Z"/><path fill="#1E3F78" d="M145.239 23.303V45.6067H135.461V23.303H145.239Z"/><path fill="#1E3F78" d="M157.955 23.303H163.629V29.5527H157.955V45.6105H148.178V23.1747C148.178 17.1505 152.476 14.2065 158.201 14.2065C160.06 14.2065 162.842 14.3815 164.113 14.9649V20.9385C163.037 20.5807 161.915 20.4484 160.738 20.4484C158.933 20.4484 157.951 21.2068 157.951 22.5485V23.303H157.955Z"/><path fill="#1E3F78" d="M178.197 39.6332C179.564 39.6332 180.741 39.497 182.156 39.1431L180.936 45.1206C179.077 45.7 177.074 45.8789 175.313 45.8789C170.036 45.8789 166.077 43.1994 166.077 37.8053V18.4885L175.854 17.1545V23.307H181.529V29.5567H175.854V37.2725C175.854 38.7465 176.735 39.6409 178.2 39.6409V39.6332H178.197Z"/><path fill="#1FA3A9" transform="translate(35.42 0)" d="M157.955 23.303H163.629V29.5527H157.955V45.6105H148.178V23.1747C148.178 17.1505 152.476 14.2065 158.201 14.2065C160.06 14.2065 162.842 14.3815 164.113 14.9649V20.9385C163.037 20.5807 161.915 20.4484 160.738 20.4484C158.933 20.4484 157.951 21.2068 157.951 22.5485V23.303H157.955Z"/><path fill="#1FA3A9" transform="translate(66.47 0) translate(0 45.61) scale(1 1.4078) translate(0 -45.61)" d="M145.239 23.303V45.6067H135.461V23.303H145.239Z"/><path fill="#1FA3A9" transform="translate(7.69 0)" d="M229.786 44.23C226.902 45.3033 223.332 45.8828 219.279 45.8828C211.606 45.8828 206.423 42.581 206.423 35.6663V33.259C206.423 26.3482 211.509 23.0464 219.034 23.0464C226.559 23.0464 231.594 26.3482 231.594 33.259V35.1335L216.641 37.1441C217.081 38.8359 219.474 39.637 222.214 39.637C224.953 39.637 228.422 39.147 231.111 38.2097L229.79 44.2338H229.786V44.23ZM222.841 31.5128C222.502 29.7316 221.473 28.3899 219.466 28.3899C217.268 28.3899 216.193 29.6383 216.193 32.2712V32.4462L222.841 31.5089V31.5128Z"/><path fill="#1FA3A9" transform="translate(35.26 0)" d="M229.786 44.23C226.902 45.3033 223.332 45.8828 219.279 45.8828C211.606 45.8828 206.423 42.581 206.423 35.6663V33.259C206.423 26.3482 211.509 23.0464 219.034 23.0464C226.559 23.0464 231.594 26.3482 231.594 33.259V35.1335L216.641 37.1441C217.081 38.8359 219.474 39.637 222.214 39.637C224.953 39.637 228.422 39.147 231.111 38.2097L229.79 44.2338H229.786V44.23ZM222.841 31.5128C222.502 29.7316 221.473 28.3899 219.466 28.3899C217.268 28.3899 216.193 29.6383 216.193 32.2712V32.4462L222.841 31.5089V31.5128Z"/><path fill="#1FA3A9" transform="translate(7.33 0)" d="M274.041 39.6332C275.408 39.6332 276.585 39.497 278 39.1431L276.78 45.1206C274.925 45.7 272.918 45.8789 271.157 45.8789C265.88 45.8789 261.921 43.1994 261.921 37.8053V18.4885L271.695 17.1545V23.307H277.369V29.5567H271.695V37.2725C271.695 38.7465 272.575 39.6409 274.041 39.6409V39.6332Z"/></g><rect class="dash" x="118.48" y="14.39" width="26.76" height="6.69" rx="3.34" fill="#1FA3A9"/></svg></div><button class="replay" onclick="replay('s1')">Replay</button></div>
+<div class="card"><h2>2 · App splash</h2><p class="note">Same motion on the icon while the driver app loads.</p>
+<div class="stage" id="s2"><div class="phone"><svg viewBox="0 0 256 256"><rect width="256" height="256" rx="58" fill="#1E3F78"/><g transform="translate(-148.68 38.34) scale(3.5885)"><path fill="#FFFFFF" d="M88.9424 27.056C92.0717 28.0788 96.9586 30.0467 96.9586 36.1564C96.9586 42.581 91.53 45.8867 82.3447 45.8867C78.3346 45.8867 74.7688 45.2606 70.1742 43.8761L69.0479 36.8292C73.9348 37.9881 78.0891 38.4781 81.1171 38.4781C85.1739 38.4781 86.6899 37.5875 86.6899 36.518C86.6899 34.7796 82.485 34.2857 76.1328 31.9251C73.9348 31.1239 69.0947 29.2067 69.0947 23.3575C69.0947 17.1973 74.4726 14.1211 83.2683 14.1211C86.7873 14.1211 91.1871 14.615 94.7022 15.6806V23.0425C91.2806 21.9692 87.5161 21.5219 84.5348 21.5219C80.6261 21.5219 79.4024 22.2803 79.4024 23.1281C79.4024 24.7343 83.7009 25.2748 88.9346 27.056H88.9424Z"/><rect class="dash" x="59.48" y="4.09" width="24.08" height="6.69" rx="3.34" fill="#32BFC4"/></g></svg></div></div><button class="replay" onclick="replay('s2')">Replay</button></div>
+<div class="card"><h2>3 · Dispatch moment</h2><p class="note">Tap Dispatch: the teal dash sweeps across the request, the brand's motion at the product's key moment.</p>
+<div class="stage"><div class="req" id="req"><div class="trail"></div><b>REQ-2024-0853 · John Kamau</b><span>Nakuru HQ → Naivasha District Hospital · Today 11:00</span>
+<div class="row"><span class="status" id="st">Ready</span><button class="go" onclick="dispatchIt()">Dispatch</button></div></div></div>
+<button class="replay" onclick="resetReq()">Reset</button></div>
+</div>
+<script>
+function replay(id){const el=document.getElementById(id);const c=el.innerHTML;el.innerHTML='';void el.offsetWidth;el.innerHTML=c}
+function dispatchIt(){const r=document.getElementById('req');r.classList.remove('sent');void r.offsetWidth;r.classList.add('sent');document.getElementById('st').textContent='Dispatched · on its way'}
+function resetReq(){const r=document.getElementById('req');r.classList.remove('sent');document.getElementById('st').textContent='Ready'}
+</script></body></html>

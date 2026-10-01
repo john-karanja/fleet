@@ -80,5 +80,7 @@ Drafted 2 Oct 2026 from the project docs. Items marked ⚠ are assumptions; plea
 - [ ] Endorsement lockup ("Swiftfleet by Swiftcent") as a master file. A light-background Swiftcent version was made by recolouring "Swift" white to navy; **confirm against an official Swiftcent light logo**.
 - [ ] Confirm the teal: the parent uses #32BFC4; the light-background version uses #1FA3A9 for contrast (per the earlier export notes).
 - [ ] Trademark search ("Swiftfleet"; also check against Suzuki Swift and SWIFT marks).
-- [ ] Final exports (favicon, app-icon set, web icons) and a one-page usage guide.
+- [x] Final exports (2 Oct 2026): SVG variants, favicon and app/web icon set, endorsed lockups, motion page (`final/`, see `final/README.md`).
+- [ ] One-page usage guide.
+- [ ] Dash variants + recall test page; then run the test with 5 county staff and 5 drivers.
 - [ ] Five-second memory test with real users (county staff, drivers).
