@@ -47,6 +47,9 @@ Drafted 2 Oct 2026 from the project docs. Items marked ⚠ are assumptions; plea
 
 ## Decisions (recorded with date)
 
+> **2 Oct 2026, later:** the owner and the designer both prefer the **Lexend slant** visually. At the owner's request, nothing was replaced: a complete **Lexend kit** was built alongside the family kit, in `final-lexend/` (schemes A all-navy and B family colours). **Which kit is primary is still to be decided.**
+
+
 | Date | Decision |
 |---|---|
 | 2 Oct 2026 | **Name written as one word: "Swiftfleet"** (capital S only, like Swiftcent). Reasons: family consistency with Swiftcent; avoids the Suzuki Swift and banking-SWIFT readings of "Swift Fleet"; a coined word is easier to protect. The "ftfl" cluster is handled in the wordmark. |
