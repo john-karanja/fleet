@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,900;1,900&family=Outfit:wght@400;600;700&display=block" rel="stylesheet">
+<style>
+:root{--navy:#1E3F78;--night:#10213F;--teal:#1FA3A9;--teal2:#32BFC4}
+body{margin:0;background:#F4F3EF;font-family:Outfit,sans-serif;color:#15223B}
+h1{font-size:32px;margin:40px 48px 6px}
+.sub{margin:0 48px 28px;color:#5B6478;font-size:16px}
+.row{display:grid;grid-template-columns:240px 560px 560px 300px;gap:16px;margin:0 48px 24px;align-items:stretch}
+.lab{background:#fff;padding:20px}
+.lab b{font-size:20px;display:block;margin-bottom:6px}.lab span{color:#5B6478;font-size:14px;line-height:1.45}
+.cell{background:#fff;display:flex;align-items:center;justify-content:center;height:200px}
+.dark{background:var(--night)}
+.icons{background:#fff;display:flex;align-items:center;justify-content:space-evenly;height:200px}
+.tile{width:120px;height:120px;border-radius:27px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.small{display:flex;gap:18px;align-items:end}
+svg text{font-family:Nunito;font-weight:900}
+</style></head><body>
+<h1>Swiftfleet · directions (after mood board)</h1>
+<p class="sub">Built on your loves: 1 Lyft · 6 Posh · 7 Zip · 8 Glovo · 10 Square · 15 Mesh · 22 Subway · 23 DoorDash. Flat navy + teal, no gradients. Stand-in type: Nunito Black (exploration).</p>
+
+<div class="row"><div class="lab"><b>1 · Convoy join</b><span>The f-t-f crossbars become one bar, letters travelling joined like a convoy.<br><em style="color:#B45309">Needs custom-drawn letters: the stand-in font makes the join read as a strikethrough, so it is shown here as the base wordmark only.</em></span></div>
+<div class="cell"><svg id="w1" width="520" height="140" viewBox="0 0 520 140"></svg></div>
+<div class="cell dark"><svg id="w1d" width="520" height="140" viewBox="0 0 520 140"></svg></div>
+<div class="icons"><div class="tile"><svg id="i1" width="120" height="120" viewBox="0 0 120 120"></svg></div><div class="small"><canvas id="c1a" width="24" height="24"></canvas><canvas id="c1b" width="16" height="16"></canvas></div></div></div>
+
+<div class="row"><div class="lab"><b>2 · In motion</b><span>Slanted heavy letters; the dot of the i is a dash shooting ahead: a swift on the move, a vehicle dispatched.</span></div>
+<div class="cell"><svg id="w2" width="520" height="140" viewBox="0 0 520 140"></svg></div>
+<div class="cell dark"><svg id="w2d" width="520" height="140" viewBox="0 0 520 140"></svg></div>
+<div class="icons"><div class="tile"><svg id="i2" width="120" height="120" viewBox="0 0 120 120"></svg></div><div class="small"><canvas id="c2a" width="24" height="24"></canvas><canvas id="c2b" width="16" height="16"></canvas></div></div></div>
+
+<div class="row"><div class="lab"><b>3 · Plate S + word</b><span>A quiet number-plate symbol with the S cut in, beside a confident word: every vehicle's own identity.</span></div>
+<div class="cell"><svg id="w3" width="520" height="140" viewBox="0 0 520 140"></svg></div>
+<div class="cell dark"><svg id="w3d" width="520" height="140" viewBox="0 0 520 140"></svg></div>
+<div class="icons"><div class="tile"><svg id="i3" width="120" height="120" viewBox="0 0 120 120"></svg></div><div class="small"><canvas id="c3a" width="24" height="24"></canvas><canvas id="c3b" width="16" height="16"></canvas></div></div></div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+function word(svg,{x,y,size,italic,colors,dotless,parts}){
+  const t=el('text',{x,y,'font-size':size},svg); if(italic)t.setAttribute('font-style','italic');
+  parts.forEach(([s,c])=>{const sp=el('tspan',{fill:c},t);sp.textContent=s});
+  return t;
+}
+function plateS(p,x,y,w,fill,cut){ // plate with S slots, cut = background colour for slots
+  const h=w*0.667,r=w*0.1;
+  el('rect',{x,y,width:w,height:h,rx:r,fill},p);
+  const sh=h*0.15, cy1=y+h*0.31, cy2=y+h*0.54;
+  el('rect',{x:x+w*0.33,y:cy1,width:w*0.67+1,height:sh,rx:sh/2,fill:cut},p);
+  el('rect',{x:x+w*0.33+sh/2,y:cy1,width:w*0.67-sh/2+1,height:sh,fill:cut},p);
+  el('rect',{x:x-1,y:cy2,width:w*0.62,height:sh,rx:sh/2,fill:cut},p);
+  el('rect',{x:x-1,y:cy2,width:w*0.62-sh/2,height:sh,fill:cut},p);
+}
+
+function crossbar(ch,size){ // measure the crossbar of a glyph: returns {top,bottom,left,right} relative to (origin x, baseline)
+  const c=document.createElement('canvas');c.width=size*2;c.height=size*2;const x=c.getContext('2d');
+  x.font=`900 ${size}px Nunito`;x.fillStyle='#000';const bx=size*0.3,by=size*1.4;x.fillText(ch,bx,by);
+  const d=x.getImageData(0,0,c.width,c.height).data;let best=null;const rows=[];
+  for(let yy=Math.floor(by-size*0.56);yy<by-size*0.36;yy++){let cnt=0,l=1e9,r=-1;for(let xx=0;xx<c.width;xx++){if(d[(yy*c.width+xx)*4+3]>128){cnt++;l=Math.min(l,xx);r=Math.max(r,xx)}}rows.push([yy,cnt,l,r])}
+  const mx=Math.max(...rows.map(r=>r[1]));const bar=rows.filter(r=>r[1]>mx*0.85);
+  return {top:bar[0][0]-by,bottom:bar[bar.length-1][0]-by+1,left:Math.min(...bar.map(r=>r[2]))-bx,right:Math.max(...bar.map(r=>r[3]))-bx+1};
+}
+document.fonts.ready.then(()=>{
+ const NAVY='#1E3F78',TEAL='#1FA3A9',WHITE='#FFFFFF',TEAL2='#32BFC4';
+ // ---- 1 Convoy join (base wordmark only; join needs custom letters)
+ [['w1',NAVY,TEAL],['w1d',WHITE,TEAL2]].forEach(([id,c1,c2])=>{ word(document.getElementById(id),{x:14,y:100,size:96,parts:[['swift',c1],['fleet',c2]]}); });
+ word(document.getElementById('i1'),{x:18,y:86,size:76,parts:[['ft','#fff']]});
+ // ---- 2 In motion
+ [['w2',NAVY,TEAL],['w2d',WHITE,TEAL2]].forEach(([id,c1,c2])=>{
+   const s=document.getElementById(id); const g=el('g',{transform:'translate(14 0) skewX(-12) translate(22 0)'},s);
+   const t=word(g,{x:0,y:104,size:96,parts:[['sw\u0131ft',c1],['fleet',c1]]});
+   const i=t.getStartPositionOfChar(2), ie=t.getExtentOfChar(2);
+   el('rect',{x:ie.x+ie.width*0.18,y:104-96*0.78,width:96*0.66,height:15,rx:7.5,fill:c2},g);
+ });
+ { const s=document.getElementById('i2'); const g=el('g',{transform:'skewX(-12) translate(22 0)'},s);
+   word(g,{x:20,y:92,size:96,parts:[['s','#fff']]});
+   el('rect',{x:62,y:26,width:42,height:14,rx:7,fill:TEAL2},g); }
+ // ---- 3 Plate S + word
+ [['w3',NAVY,'#fff',NAVY],['w3d',WHITE,'#10213F',WHITE]].forEach(([id,pc,cut,wc])=>{
+   const s=document.getElementById(id); plateS(s,10,40,96,pc,cut);
+   word(s,{x:126,y:100,size:78,parts:[['Swiftfleet',wc]]});
+ });
+ { const s=document.getElementById('i3'); plateS(s,18,32,84,'#fff','#1E3F78'); }
+ // small sizes: rasterise icon svgs
+ [['i1','c1a','c1b'],['i2','c2a','c2b'],['i3','c3a','c3b']].forEach(([id,a,b])=>{
+   const svg=document.getElementById(id).cloneNode(true);
+   const wrap=`<svg xmlns="${NS}" width="120" height="120" viewBox="0 0 120 120"><rect width="120" height="120" rx="27" fill="#1E3F78"/>${svg.innerHTML}</svg>`;
+   const css=[...document.styleSheets].map(()=>'').join('');
+   const img=new Image(); img.onload=()=>{[a,b].forEach(c=>{const cv=document.getElementById(c),x=cv.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(img,0,0,cv.width,cv.height)})};
+   img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(wrap.replace(/<text /g,'<text font-family="Nunito" font-weight="900" '));
+ });
+ document.body.setAttribute('data-ready','1');
+});
+</script></body></html>

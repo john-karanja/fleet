@@ -6,7 +6,7 @@
 **If you are actively building a new screen under time pressure, skip straight to `09_PATTERN_LIBRARY.md`** — it has copy-paste prompt fragments for every proven pattern and a pre-flight checklist. Come back to docs 01-07 only for the "why" behind a decision, not as the first stop for "how."
 **Fast orientation (2026-09-18) — this doc has grown faster than it's been reconciled; read §12 first for actual current state, not §6** (§6's "Current State" header is stale — it predates FRAME-07/08/09 and the 11-profile model). Two real, unresolved contradictions to know about before trusting anything below at face value: (1) `01_USER_PERSONAS.md` v3.0 documents **16 separate SRS-role personas**, but §11/§12 below describe a newer **11 Primary Operational Profiles** model (source: `CVFMS Primary profiles.docx`, in the repo root) as "locked" — these were never reconciled into one source of truth, and `04_FIGMA_SCREEN_BLUEPRINT.md`'s new FRAME-08/09 sections cite both naming schemes interchangeably. (2) §8's "Driver Management" web-registry screen (184 drivers, licence/expiry columns) is a **still-open, unresolved gap**, distinct from FRAME-07 (the Driver Mobile App in §12) — don't assume the new driver work in §11/§12 closes it.
 
-**Desktop work (since 2026-09-24) runs in a separate chat from mobile. For desktop, read §25 at the end of this doc, then `13_SYSTEM_MAP.md` and `12_DESKTOP_REDESIGN.md` §2.**
+**Desktop and brand work (since 2026-09-24) runs in a separate chat from mobile. Start with §29 at the end of this doc (consolidated handover: desktop design, system map, Swiftfleet logo, open items), then `13_SYSTEM_MAP.md`, `12_DESKTOP_REDESIGN.md` §2 and `brand/swift-fleet/BRIEF.md`.**
 
 ---
 
@@ -2301,3 +2301,176 @@ direction it describes is **confirmed by the user as the standard**, now formali
    request detail, chips, pill buttons) as real components.
 5. Tell the mobile chat about the D11 stage order (pre-trip inspection *before* dispatch).
 6. Logo: once the user picks a direction, build the kit with the logo-design skill (Phase 7).
+
+---
+
+## 28. Brand: Swiftfleet logo decided (2 Oct 2026)
+
+The product is **Swiftfleet** (one word), a Swiftcent product. The logo followed the 8-step process
+in `brand/LOGO_PROCESS.md` (taken from the TaifaPay handover).
+
+**Approved direction: "In motion"** (2 Oct 2026):
+- A heavy slanted lowercase wordmark; the i's dot is a teal dash trailing back.
+- App icon: a slanted "s" with the same dash.
+- Navy and teal.
+- One colour only inside county products, as "Powered by"; the county leads.
+
+**Where things are:**
+- Full decisions, geometry and open items: `brand/swift-fleet/BRIEF.md`.
+- Masters: `brand/swift-fleet/refine/`.
+
+**Next:** custom lettering to replace the Nunito stand-in.
+
+Earlier rounds are kept for reference only: CVFMS C concepts in `brand/logo/`, and Swiftfleet rounds
+1–3 and Crazy 8s in `brand/swift-fleet/`. They were drawn before the mood board, so they're
+unvalidated. The 8-option client review is in `logos/Swift Fleet Client Review.html`.
+
+**Update, same day:** the Swiftfleet wordmark now joins the Swiftcent family directly.
+- It's built from Swiftcent's own letter shapes: "Swift" plus "fleet" in teal.
+- The only product change is the trailing i-dot dash.
+- App icon: Swiftcent's S with the dash.
+- This supersedes the Lexend lettering. Masters are in `brand/swift-fleet/final/`; see `BRIEF.md`.
+
+---
+
+## 29. Consolidated handover: desktop + brand chat, 2026-09-24 → 2026-10-02 (read this first)
+
+This one section replaces reading §25–§28 one by one. It covers everything the desktop chat did. The
+mobile stream is in §13–§24.
+
+### 29.1 Where to look
+
+| Need | File |
+|---|---|
+| System structure: templates T1–T9, patterns P0–P17, components, page register, connections, decisions D1–D11 | `docs/13_SYSTEM_MAP.md` |
+| Desktop working log: audits, Figma AI prompts, render checks, status table | `docs/12_DESKTOP_REDESIGN.md` (§2 = status) |
+| Visual standard (Wix approach, desktop) | `docs/03_MASTER_DESIGN_SYSTEM.md` §1.5 |
+| Figma AI skill (desktop) | `.agents/skills/figma-skill-cvfms-desktop/SKILL.md` (corrected; **re-upload to Figma AI**) |
+| Mobbin references and borrow/reject notes | `docs/05_MOBBIN_BENCHMARK_AND_ALIGNMENT.md` |
+| Logo process (8 steps, from the TaifaPay handover) | `brand/LOGO_PROCESS.md` |
+| Swiftfleet logo: brief, every dated decision, geometry, open items | `brand/swift-fleet/BRIEF.md` |
+| Final logo masters | `brand/swift-fleet/final/` |
+| Original 8-option client logo review | `logos/Swift Fleet Client Review.html` (static rebuild) + `logos/export/swift-fleet-logos/<ref>/` |
+
+### 29.2 Product and brand facts (settled)
+- **The product is "Swiftfleet"**: one word, capital S only, a **Swiftcent** product sold to Kenyan
+  county governments. "CVFMS" is the SRS's generic name only.
+- **Brand architecture:**
+  - Inside county products, **the county leads** (county name and emblem, Civic Green UI) and
+    Swiftfleet appears in **one colour as "Powered by"**.
+  - On vendor material (proposals, team clothing, app stores), Swiftfleet leads, endorsed "by
+    Swiftcent".
+- **Logo (decided 2 Oct 2026):**
+  - The wordmark is built **entirely from Swiftcent's own letter shapes**: "Swift" in navy (white on
+    dark) plus "fleet" in teal. The l is made from the parent's i stem.
+  - **The one change from the parent is the i's dot, which becomes a teal dash trailing back** (the
+    "In motion" idea).
+  - The app icon is the parent's capital S with the trailing dash.
+  - Flat navy #1E3F78 and teal (#1FA3A9 on light, #32BFC4 on dark); no gradients. Tested at 24 and
+    16px and in one colour.
+- **Lexend** stays the app's interface typeface; it is not used in the logo.
+
+### 29.3 What was done, in order
+
+**Desktop design (24–25 Sep):**
+1. **Audit** of the 9 desktop screens on the Figma "Refined" page (`12` §1).
+2. **Information budget** rule (`12` §7): landing ≤ 5 blocks, no number shown twice, proactively
+   flag overload, "problems move up".
+3. **Today / Fleet overview (T1) taken from v2 to v3, near-locked:**
+   - P0 header (breadcrumb, greeting, scope, freshness stamp with date).
+   - Fleet-state band + fuel pace card.
+   - Needs attention (LIVE NOW with photos / Blocking / This week).
+   - Dispatch pipeline + approvals; watch list.
+   - Remaining: `12` §8i polish + 2 direct `use_figma` fixes.
+4. **System map (`13`):** the object model (Request/Trip as the spine) and a lifecycle × role matrix.
+   Decisions **D1–D11** were made user-first and **checked against the SRS** (§11a):
+   - Only Fail blocks dispatch.
+   - Transport returns, approvers reject.
+   - Pool allocation (§5.3) is different from request allocation.
+   - **Requests & trips** merges Vehicle Request + Dispatch + Journey.
+   - Layout is set by role (no toggle).
+   - One request-detail component with a role-aware footer.
+   - **Stage order: … Needs vehicle → Needs driver → Driver check-in → Ready → On trip.**
+     ⚠ This puts the pre-trip inspection *before* dispatch; **tell the mobile chat**.
+5. **Requests & trips: four role views designed and rendered:** Grace (list + drawer), Daniel
+   (queue), the approver (queue + decision tabs), Mary (My requests + New request form).
+   - Per-page fix prompts: `12` §10k.
+   - Strip and Wix pass for Daniel: `12` §11a.
+6. **Live-app audits** of "Today" (`12` §5) and "Requests" (`12` §10), plus a dev-bug list.
+
+**Visual direction and docs (1 Oct):**
+7. **Wix approach confirmed as the desktop standard** (`03` §1.5).
+8. The desktop skill's content errors were fixed: invented persona names, old nav, scope switcher
+   placement.
+9. §26 (written by another session) was corrected in §26.7.
+
+**Repository (2 Oct):**
+10. Created and pushed to **https://github.com/john-karanja/fleet** (`main`).
+    - Credentials and live-app screenshots are excluded via `.gitignore`.
+    - **Work since the first commit is not yet pushed** (see 29.5).
+
+**Brand (2 Oct):**
+11. Logo exploration before the process: CVFMS "C" concepts (`brand/logo/`), Swiftfleet rounds 1–3,
+    and a Crazy 8s round (`brand/swift-fleet/round2/`, `round3/`, `crazy8/`). Kept for reference
+    and **unvalidated**: they were drawn before the taste mood board.
+12. Adopted the **TaifaPay 8-step logo process** (`brand/LOGO_PROCESS.md`):
+    - Brief.
+    - **Mood board of 24 Mobbin logos**, scored by the owner: loved Lyft, Posh, Zip, Glovo, Square,
+      Mesh, Subway, DoorDash; disliked Box Box Club, Too Good To Go.
+    - Directions: "In motion" chosen.
+    - Refinement on exact geometry.
+    - In-use board.
+    - Approved, then the lettering was upgraded.
+    - Finally rebuilt from Swiftcent's own letters (family option C).
+13. Rebuilt the client's Claude Design review page locally (8 options: 9a, 14b, 15c, 13a, 11a, 10a,
+    10b, 2a) and exported all 32 SVGs.
+
+### 29.4 Open items
+
+**Desktop design:**
+- [ ] Re-upload the corrected desktop skill to Figma AI.
+- [ ] Run `12` §11a (Daniel's queue: Wix + strip, resized to 1440). Then apply the same pass to the
+  approver queue, Grace's drawer, My requests and the New request form.
+- [ ] Today (T1): run the §8i polish, then the Wix + 1440 conversion, and lock it.
+- [ ] Re-authorize the Figma MCP (`/mcp`), then build the shared components as real Figma
+  components: stage strip, stepper, request detail, chips, pill buttons.
+- [ ] Tell the mobile chat about the D11 stage order.
+- [ ] Validate decisions D1–D11 with the product owner when available.
+
+**Brand:**
+- [ ] Official **light-background Swiftcent logo**. Ours is a recolour (white "Swift" → navy).
+- [ ] Teal on white: keep #1FA3A9 or use the parent's #32BFC4 everywhere?
+- [ ] Logo kit:
+  - "Swiftfleet by Swiftcent" lockup master
+  - favicon, app-icon set and web icons (`export_variants.py`)
+  - in-use board re-rendered with the final marks
+  - one-page usage guide
+- [ ] Trademark search for "Swiftfleet" (also against Suzuki Swift and SWIFT).
+- [ ] Five-second memory test with county staff and drivers.
+
+**Dev team:**
+- [ ] The dev-bug list in `12` §5 and §10:
+  - KPIs that read 0 or don't reconcile
+  - dispatch allowed with failing checks
+  - FAIL shown before assignment
+  - stale requests never expire
+  - pagination not applied
+  - two ID formats
+  - test data in the environment
+  - self-approval not checked server-side
+
+### 29.5 Housekeeping
+- **Uncommitted** (as of 2 Oct):
+  - `brand/LOGO_PROCESS.md`, `brand/swift-fleet/`
+  - `logos/Swift Fleet Client Review.html`, `logos/Swift-Logo.svg`, the 5 new
+    `logos/export/swift-fleet-logos/` option folders
+  - doc edits
+  - `logos/Logo.svg` shows as deleted; it looks like it was replaced by `Swift-Logo.svg`
+  - root-level `Swift Fleet Logo Options.html`, `SVG Logo Designer Review-handoff.zip` and
+    `svg-logo-designer-review/` (added outside this chat; review before committing)
+- **Tools:**
+  - logo-design plugin installed (user scope).
+  - **Mobbin MCP** available.
+  - **Figma MCP needs re-auth.**
+  - The Claude Design MCP is not available in this environment; Claude Design bundles were
+    unpacked locally instead.

@@ -23,6 +23,8 @@ Read these before designing, building, or revising any UI or Figma screen, in th
 12. [`docs/12_DESKTOP_REDESIGN.md`](docs/12_DESKTOP_REDESIGN.md) — **desktop redesign pass (started 2026-09-24), run in a separate chat from mobile.** Audit of the 9 desktop screens on the Figma "Refined" page, execution order, and Figma AI prompts bringing them up to the refined design language (Lexend/Source Sans 3, "simple is not sterile"). Desktop prompts and render checks go here, not in the handover, until the pass is done.
 13. [`docs/13_SYSTEM_MAP.md`](docs/13_SYSTEM_MAP.md) — **the structure everything hangs on (2026-09-24):** 9 page templates, ~16 shared patterns, the component inventory (existing vs. to build), a register of every page by role and template, the connection map (where every link goes), and the 9-step audit method to run on every page. Start here before designing or auditing any screen.
 
+**Brand:** the product is **Swiftfleet** (a Swiftcent product). The logo process is in [`brand/LOGO_PROCESS.md`](brand/LOGO_PROCESS.md); the Swiftfleet logo decisions, geometry and open items are in [`brand/swift-fleet/BRIEF.md`](brand/swift-fleet/BRIEF.md), with final masters in `brand/swift-fleet/final/`.
+
 Source specification: [`Kenya_County_Government_Vehicle_Fleet_Management_System_SRS.pdf`](Kenya_County_Government_Vehicle_Fleet_Management_System_SRS.pdf) and [`CVFMS_Architecture_and_Implementation_Summary.md`](CVFMS_Architecture_and_Implementation_Summary.md).
 
 ## Design Rules
