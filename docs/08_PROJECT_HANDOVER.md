@@ -2349,7 +2349,7 @@ mobile stream is in §13–§24.
 | Mobbin references and borrow/reject notes | `docs/05_MOBBIN_BENCHMARK_AND_ALIGNMENT.md` |
 | Logo process (8 steps, from the TaifaPay handover) | `brand/LOGO_PROCESS.md` |
 | Swiftfleet logo: brief, every dated decision, geometry, open items | `brand/swift-fleet/BRIEF.md` |
-| Final logo masters | `brand/swift-fleet/final/` |
+| Final logo masters | `brand/swift-fleet/final/` (family kit) · `brand/swift-fleet/final-lexend/` (Lexend kit) · `brand/swift-fleet/world-class/` (refined Lexend kit + usage guide, `index.html`) |
 | Original 8-option client logo review | `logos/Swift Fleet Client Review.html` (static rebuild) + `logos/export/swift-fleet-logos/<ref>/` |
 
 ### 29.2 Product and brand facts (settled)
@@ -2368,7 +2368,7 @@ mobile stream is in §13–§24.
   - The app icon is the parent's capital S with the trailing dash.
   - Flat navy #1E3F78 and teal (#1FA3A9 on light, #32BFC4 on dark); no gradients. Tested at 24 and
     16px and in one colour.
-- **Lexend** stays the app's interface typeface; it is not used in the logo.
+- **Lexend** stays the app's interface typeface. Since the evening of 2 Oct there is also a Lexend-based logo kit (slanted 12°, same dash idea) in `final-lexend/`, plus a refined build in `world-class/`. **Which kit is primary, family or Lexend, is still open.** The owner and the designer both prefer the Lexend slant visually.
 
 ### 29.3 What was done, in order
 
@@ -2439,7 +2439,9 @@ mobile stream is in §13–§24.
 
 **Brand:**
 - [ ] Official **light-background Swiftcent logo**. Ours is a recolour (white "Swift" → navy).
-- [ ] Teal on white: keep #1FA3A9 or use the parent's #32BFC4 everywhere?
+- [ ] Teal on white: keep #1FA3A9 or use the parent's #32BFC4 everywhere? (The world-class pass adds Teal deep #147B80 for small sizes, at 5.0:1 on white.)
+- [ ] Decide the primary kit: family (`final/`) or Lexend (`world-class/`). Suggested method: a recall test.
+- [ ] If Lexend wins, have a type designer draw a true italic so the s and e curves aren't mechanically sheared.
 - [ ] Logo kit:
   - "Swiftfleet by Swiftcent" lockup master
   - favicon, app-icon set and web icons (`export_variants.py`)

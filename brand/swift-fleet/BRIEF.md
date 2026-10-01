@@ -49,6 +49,8 @@ Drafted 2 Oct 2026 from the project docs. Items marked ⚠ are assumptions; plea
 
 > **2 Oct 2026, later:** the owner and the designer both prefer the **Lexend slant** visually. At the owner's request, nothing was replaced: a complete **Lexend kit** was built alongside the family kit, in `final-lexend/` (schemes A all-navy and B family colours). **Which kit is primary is still to be decided.**
 
+> **2 Oct 2026, world-class pass:** the Lexend kit was refined in `world-class/`. Changes: one cut angle for every stroke end and the dash, aligned f/t crossbars, measured spacing, a lighter dark cut, small-size cuts, and Teal deep `#147B80` for small sizes (5.0:1 on white). An optional f–t–f join study was added. `final-lexend/` is untouched. See `world-class/README.md` and `world-class/index.html`. Still open: which kit is primary, a true drawn italic by a type designer, and a trademark search.
+
 
 | Date | Decision |
 |---|---|
