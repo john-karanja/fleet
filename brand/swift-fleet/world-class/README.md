@@ -5,6 +5,14 @@
 A refined build of the Lexend kit. **`../final/` and `../final-lexend/` are untouched.**
 Open `index.html` (or `board.png`) for the before/after, construction, small sizes and usage guide.
 
+**Review pack for the bosses (2 Oct 2026):**
+- `Swiftfleet-logo-options.jpg`: the two finalists side by side. Option 1 "Forward lean" (Lexend, recommended) and Option 2 "Swiftcent letters" (family), each on white, on dark, as the app icon and with "by Swiftcent".
+- `Swiftfleet-logo-review.jpg`: the recommended option in six views.
+- Deck (12 slides: the ask, the story, the evidence, decisions, next steps with costs to fill in): https://claude.ai/artifact/J3iP7JjzyS3uSLeeGC5sCR
+- Logo sheet (every background, icons, lockups, colours): https://claude.ai/artifact/AQK9RQMWTSmvX6BkK4rMpc, source `logo-sheet.html` / `sheet.py`.
+- Full board (decisions, construction, usage guide): https://claude.ai/artifact/BY8V3vdTwJwXRJFqhBhMwu, source `index.html`.
+- All links are private until they're shared from each page's Share menu. Fill in the deck's `[KES __]` costs (trademark search, type designer) before presenting.
+
 ## What changed
 
 - **Signature cut:** the s, e and f stroke endings are recut vertically in the upright drawing. After the 12° slant, every

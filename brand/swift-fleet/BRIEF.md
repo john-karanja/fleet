@@ -59,6 +59,8 @@ Drafted 2 Oct 2026 from the project docs. Items marked ⚠ are assumptions; plea
 > - **Lockups:** rebuilt from the refined letters. The endorsed lockup needs a minimum width of 220px.
 > - **Figma:** prompts are in `world-class/FIGMA_PROMPTS.md`.
 
+> **2 Oct 2026, review pack:** an options JPG (two finalists: "Forward lean" = Lexend, recommended; "Swiftcent letters" = family), a six-view JPG, a 12-slide deck, a logo sheet and the board are ready for the bosses. Files and links are in `world-class/README.md`. **Waiting on the bosses' choice;** the user-first decisions above stand until then.
+
 
 | Date | Decision |
 |---|---|

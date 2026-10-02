@@ -2441,6 +2441,7 @@ mobile stream is in §13–§24.
 - [ ] Official **light-background Swiftcent logo**. Ours is a recolour (white "Swift" → navy).
 - [ ] Teal on white: keep #1FA3A9 or use the parent's #32BFC4 everywhere? (The world-class pass adds Teal deep #147B80 for small sizes, at 5.0:1 on white.)
 - [x] Primary kit: Lexend world-class (2 Oct, validate with the owner; a recall test is still worth running).
+- [ ] **Bosses' review (sent 2 Oct):** `brand/swift-fleet/world-class/Swiftfleet-logo-options.jpg` plus `Swiftfleet-logo-review.jpg`, with the deck https://claude.ai/artifact/J3iP7JjzyS3uSLeeGC5sCR and the logo sheet https://claude.ai/artifact/AQK9RQMWTSmvX6BkK4rMpc. If they choose Option 2 (Swiftcent letters), the family kit in `final/` becomes primary: rerun step 9 of `brand/LOGO_PROCESS.md` on it and update the Figma prompts' file paths.
 - [ ] Run the 5 Figma prompts in `brand/swift-fleet/world-class/FIGMA_PROMPTS.md` (needs Figma re-auth and a manual SVG import first).
 - [ ] If Lexend wins, have a type designer draw a true italic so the s and e curves aren't mechanically sheared.
 - [ ] Logo kit:
